@@ -1,6 +1,6 @@
 import React from 'react';
-import Enzyme from 'enzym';
-import EnzymeAdapter from 'enzyme-adapter-react-16';
+// import Enzyme from 'enzym';
+// import EnzymeAdapter from 'enzyme-adapter-react-16';
 import ReactDOM from 'react-dom';
 import App from './App';
 
