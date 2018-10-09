@@ -9,6 +9,7 @@ import rootReducer from '../src/reducers';
  * @function storeFactory
  * @return {Store} - Redux store
  */
+
 export const storeFactory = (initialState) => {
   return createStore(rootReducer, initialState);
 }
