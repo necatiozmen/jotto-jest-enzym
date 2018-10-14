@@ -12,8 +12,7 @@ describe('guessWord action dispatcher', () => {
     beforeEach(() => {
       store = storeFactory(initialState);
     });
-    //tahmin kelime girildikten sonra action dispatch edip state i aliyoruz
-    //expectedState ise actionin reducera geldikten sonraki halini simule ediyor.
+    
     test('updates state correctly for unsuccessful guess', () => {
       store.dispatch(guessWord(unsuccessfulGuess));
       const newState = store.getState()
@@ -30,7 +29,6 @@ describe('guessWord action dispatcher', () => {
     test('updates state correctly for successful guess', () => {
       store.dispatch(guessWord(secretWord));
       const newState = store.getState();
-      console.log('newState', newState);
       const expectedState = {
         ...initialState,
         success: true,
@@ -45,6 +43,7 @@ describe('guessWord action dispatcher', () => {
   describe('some guessed words', () => {
     const guessedWords =[ { guessWord: 'agile', letterMatchCount:1 } ];
     const initialState = { guessedWords, secretWord }
+    
     let store;
     beforeEach(() => {
       store = storeFactory(initialState);
